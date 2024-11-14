@@ -9,6 +9,7 @@ function App() {
 
   function handleCategoryChange(event) {
     setCategory(event.target.value);
+
   }
 
   function handleAmountChange(event) {
@@ -80,7 +81,7 @@ function App() {
             const record = records[i];
             list.push(
               <li key={record.id}>
-                {record.type === "income" ? "수입" : "지출"} {record.amount}원
+                {record.type === "income" ? "(수입)" : "(지출)"} {record.amount}원
                 <button onClick={() => deleteRecord(record.id, record.amount, record.type)}>삭제</button>
               </li>
             );
